@@ -8,35 +8,24 @@ public class BinTree {
 		System.out.println("BinTree created");
 	}
 	
-	public void insertNode(int num) {
-		insertNode(root, num);
+	public void insertNode(Node node) {
+		root = insertNode(root, node);
 	}
 	
-	public Node insertNode(Node node) {
+	private Node insertNode(Node root, Node node) {
+		
 		if (root == null) {
 			root = node;
+			return root;
 		}
-		else if (node.getKey() < root.getKey()) {
-			node.setLeftChild(insertNode(root.getLeftChild()));
+		
+		if (node.getKey() < root.getKey()) {
+			root.setLeftChild(insertNode(root.getLeftChild(), node));
 		}
 		else {
-			node.setRightChild(insertNode(root.getRightChild()));
+			root.setRightChild(insertNode(root.getRightChild(), node));
 		}
-		return node;
-	}
-	
-	private Node insertNode(Node node, int num) {
-		// TODO insertNode Stub	
-		if (root == null) {
-			root = new Node(num);
-		} 
-		else if (num < root.getKey()){
-			insertNode(root.getLeftChild(), num);
-		} 
-		else {
-			insertNode(root.getRightChild(), num);
-		}
-		return node;
+		return root;
 	}
 	
 	public void treeWalk () {
@@ -47,7 +36,7 @@ public class BinTree {
 
 		if (root != null) {
 			treeWalk(root.getLeftChild());
-			System.out.println(root.getKey() + "-");
+			System.out.print(root.getKey() + "|");
 			treeWalk(root.getRightChild());
 		}
 	}
