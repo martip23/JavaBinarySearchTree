@@ -3,10 +3,17 @@ package binarySearchTree;
 import java.util.Scanner; // For INPUT operations
 import java.util.concurrent.ThreadLocalRandom; // For random INTs
 
+/**
+ * Program to test a Binary Search Tree. 
+ * Creates nodes and inserts nodes to a BST.
+ * @author Patrick Martinez
+ * 
+ */
 public class TestDriver {
 
 	public static void main(String[] args) {
 		
+		// Default randInt size
 		final int DEFAULT_SIZE = 5;
 
 		int input = DEFAULT_SIZE;
