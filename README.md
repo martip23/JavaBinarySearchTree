@@ -1,5 +1,6 @@
 # JavaBinarySearchTree
 [![Build Status](https://travis-ci.org/martip23/JavaBinarySearchTree.svg?branch=master)](https://travis-ci.org/martip23/JavaBinarySearchTree)
+
 A basic binary search tree with an add and inorder traverse method written in java.
 
 
