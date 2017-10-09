@@ -4,7 +4,7 @@
 A basic binary search tree with an add and inorder traverse method written in java.
 
 # Class Diagram
-![Class Diagram](/BstDiagram.JPG)
+![Class Diagram](/BST Class Diagram.png)
 
 ## Getting Started
 These instructions will help you get a copy of the project up and running on your local machine.
